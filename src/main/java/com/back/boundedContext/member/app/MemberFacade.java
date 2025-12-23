@@ -19,7 +19,7 @@ public class MemberFacade {
         return memberRepository.count();
     }
 
-    @Transactional(readOnly = true)
+    @Transactional
     public Member join(String username, String password, String nickname) {
         return memberJoinUseCase.join(username, password, nickname);
     }
