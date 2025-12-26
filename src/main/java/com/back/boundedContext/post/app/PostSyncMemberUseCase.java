@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 @Service
 @RequiredArgsConstructor
 public class PostSyncMemberUseCase {
-    private PostMemberRepository postMemberRepository;
+    private final PostMemberRepository postMemberRepository;
 
     public PostMember syncMember(MemberDto member) {
         PostMember postMember = new PostMember(
