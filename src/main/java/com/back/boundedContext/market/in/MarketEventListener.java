@@ -1,7 +1,7 @@
 package com.back.boundedContext.market.in;
 
 
-import com.back.boundedContext.market.MarketFacade;
+import com.back.boundedContext.market.app.MarketFacade;
 import com.back.shared.member.event.MemberJoinedEvent;
 import com.back.shared.member.event.MemberModifiedEvent;
 import lombok.RequiredArgsConstructor;
