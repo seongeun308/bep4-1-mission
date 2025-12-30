@@ -14,13 +14,12 @@ public class PostApiClient {
 
     public PostApiClient(@Value("${custom.global.internalBackUrl}") String internalBackUrl) {
         this.restClient = RestClient.builder()
-                .baseUrl(internalBackUrl + "/api/v1/post")
+                .baseUrl(internalBackUrl + "/api/v1/posts")
                 .build();
     }
 
     public List<PostDto> getItems() {
         return restClient.get()
-                .uri("/posts")
                 .retrieve()
                 .body(new ParameterizedTypeReference<List<PostDto>>() {
                 });
@@ -28,7 +27,7 @@ public class PostApiClient {
 
     public PostDto getItem(int id) {
         return restClient.get()
-                .uri("/post/%d".formatted(id))
+                .uri("/%d".formatted(id))
                 .retrieve()
                 .body(new ParameterizedTypeReference<>() {
                 });
