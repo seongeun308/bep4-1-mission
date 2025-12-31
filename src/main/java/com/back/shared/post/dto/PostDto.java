@@ -1,6 +1,6 @@
 package com.back.shared.post.dto;
 
-import com.back.standard.modelType.CanGetModelTypeCode;
+import com.back.standard.modelType.HasModelTypeCode;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Getter
 @NoArgsConstructor
-public class PostDto implements CanGetModelTypeCode {
+public class PostDto implements HasModelTypeCode {
     private int id;
     private LocalDateTime createDate;
     private LocalDateTime modifyDate;
